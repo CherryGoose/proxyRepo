@@ -251,15 +251,12 @@ paket-files/
 .idea/
 *.sln.iml
 
-# TestProject
-src/TestProject.Web/Logs/*
-src/TestProject.Web/Logs/*
-src/TestProject.AuthServer/Logs/*
-src/TestProject.HttpApi.Host/Logs/*
-src/TestProject.HttpApi.HostWithIds/Logs/*
-src/TestProject.DbMigrator/Logs/*
-src/TestProject.Blazor.Server/Logs/*
-src/TestProject.Blazor.Server.Tiered/Logs/*
+# NewModule
+host/NewModule.AuthServer/Logs/logs.txt
+host/NewModule.HttpApi.Host/Logs/logs.txt
+host/NewModule.Web.Host/Logs/logs.txt
+host/NewModule.Web.Unified/Logs/logs.txt
+host/NewModule.Blazor.Server.Host/Logs/logs.txt
 
 # Use abp install-libs to restore.
 **/wwwroot/libs/*

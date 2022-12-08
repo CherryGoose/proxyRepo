@@ -1,0 +1,55 @@
+{
+  "modules": {
+    "newModule": {
+      "rootPath": "newModule",
+      "remoteServiceName": "NewModule",
+      "controllers": {
+        "NewModule.Samples.SampleController": {
+          "controllerName": "Sample",
+          "controllerGroupName": "Sample",
+          "isRemoteService": true,
+          "apiVersion": null,
+          "type": "NewModule.Samples.SampleController",
+          "interfaces": [
+            {
+              "type": "NewModule.Samples.ISampleAppService"
+            }
+          ],
+          "actions": {
+            "GetAsync": {
+              "uniqueName": "GetAsync",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/NewModule/sample",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "NewModule.Samples.SampleDto",
+                "typeSimple": "NewModule.Samples.SampleDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "NewModule.Samples.ISampleAppService"
+            },
+            "GetAuthorizedAsync": {
+              "uniqueName": "GetAuthorizedAsync",
+              "name": "GetAuthorizedAsync",
+              "httpMethod": "GET",
+              "url": "api/NewModule/sample/authorized",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "NewModule.Samples.SampleDto",
+                "typeSimple": "NewModule.Samples.SampleDto"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "NewModule.Samples.ISampleAppService"
+            }
+          }
+        }
+      }
+    }
+  },
+  "types": {}
+}

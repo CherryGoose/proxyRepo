@@ -1,0 +1,62 @@
+{
+  "modules": {
+    "app": {
+      "rootPath": "app",
+      "remoteServiceName": "Default",
+      "controllers": {
+        "TestProject.MainAppService": {
+          "controllerName": "Main",
+          "controllerGroupName": "Main",
+          "isRemoteService": true,
+          "apiVersion": null,
+          "type": "TestProject.MainAppService",
+          "interfaces": [
+            {
+              "type": "TestProject.IMainAppService"
+            }
+          ],
+          "actions": {
+            "SetMainAttAsyncByM": {
+              "uniqueName": "SetMainAttAsyncByM",
+              "name": "SetMainAttAsync",
+              "httpMethod": "POST",
+              "url": "api/app/main/set-main-att",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "m",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "m",
+                  "name": "m",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Boolean",
+                "typeSimple": "boolean"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "TestProject.IMainAppService"
+            }
+          }
+        }
+      }
+    }
+  },
+  "types": {}
+}

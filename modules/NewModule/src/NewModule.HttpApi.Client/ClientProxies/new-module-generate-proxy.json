@@ -1,0 +1,124 @@
+{
+  "modules": {
+    "new-module": {
+      "rootPath": "new-module",
+      "remoteServiceName": "NewModule",
+      "controllers": {
+        "NewModule.ModuleAppService": {
+          "controllerName": "Module",
+          "controllerGroupName": "Module",
+          "isRemoteService": true,
+          "apiVersion": null,
+          "type": "NewModule.ModuleAppService",
+          "interfaces": [
+            {
+              "type": "Volo.Abp.Validation.IValidationEnabled"
+            },
+            {
+              "type": "Volo.Abp.Auditing.IAuditingEnabled"
+            },
+            {
+              "type": "Volo.Abp.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+            },
+            {
+              "type": "NewModule.IModuleAppService"
+            }
+          ],
+          "actions": {
+            "SetModAttAsyncByM": {
+              "uniqueName": "SetModAttAsyncByM",
+              "name": "SetModAttAsync",
+              "httpMethod": "POST",
+              "url": "api/new-module/module/set-mod-att",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "m",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "m",
+                  "name": "m",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Boolean",
+                "typeSimple": "boolean"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "NewModule.IModuleAppService"
+            }
+          }
+        },
+        "NewModule.Samples.SampleAppService": {
+          "controllerName": "Sample",
+          "controllerGroupName": "Sample",
+          "isRemoteService": true,
+          "apiVersion": null,
+          "type": "NewModule.Samples.SampleAppService",
+          "interfaces": [
+            {
+              "type": "Volo.Abp.Validation.IValidationEnabled"
+            },
+            {
+              "type": "Volo.Abp.Auditing.IAuditingEnabled"
+            },
+            {
+              "type": "Volo.Abp.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+            },
+            {
+              "type": "NewModule.Samples.ISampleAppService"
+            }
+          ],
+          "actions": {
+            "GetAsync": {
+              "uniqueName": "GetAsync",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/new-module/sample",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "NewModule.Samples.SampleDto",
+                "typeSimple": "NewModule.Samples.SampleDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "NewModule.Samples.ISampleAppService"
+            },
+            "GetAuthorizedAsync": {
+              "uniqueName": "GetAuthorizedAsync",
+              "name": "GetAuthorizedAsync",
+              "httpMethod": "GET",
+              "url": "api/new-module/sample/authorized",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "NewModule.Samples.SampleDto",
+                "typeSimple": "NewModule.Samples.SampleDto"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "NewModule.Samples.ISampleAppService"
+            }
+          }
+        }
+      }
+    }
+  },
+  "types": {}
+}

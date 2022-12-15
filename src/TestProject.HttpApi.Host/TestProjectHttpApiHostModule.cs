@@ -95,7 +95,12 @@ public class TestProjectHttpApiHostModule : AbpModule
     {
         Configure<AbpAspNetCoreMvcOptions>(options =>
         {
-            options.ConventionalControllers.Create(typeof(TestProjectApplicationModule).Assembly);
+            options.ConventionalControllers.Create(typeof(TestProjectApplicationModule).Assembly, opts =>
+            {
+                opts.RootPath = "main-module";
+                opts.RemoteServiceName = "MainModule";
+
+            });
 
             options.ConventionalControllers.Create(typeof(NewModuleApplicationModule).Assembly, opts =>
             {

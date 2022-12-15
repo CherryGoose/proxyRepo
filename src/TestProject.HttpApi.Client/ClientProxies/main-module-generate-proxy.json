@@ -1,8 +1,8 @@
 {
   "modules": {
-    "app": {
-      "rootPath": "app",
-      "remoteServiceName": "Default",
+    "main-module": {
+      "rootPath": "main-module",
+      "remoteServiceName": "MainModule",
       "controllers": {
         "TestProject.MainAppService": {
           "controllerName": "Main",
@@ -20,7 +20,7 @@
               "uniqueName": "SetMainAttAsyncByM",
               "name": "SetMainAttAsync",
               "httpMethod": "POST",
-              "url": "api/app/main/set-main-att",
+              "url": "api/main-module/main/set-main-att",
               "supportedVersions": [],
               "parametersOnMethod": [
                 {

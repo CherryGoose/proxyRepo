@@ -17,7 +17,7 @@
     <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Shared" Version="6.0.1" />
     <PackageReference Include="Volo.Abp.SettingManagement.Domain.Shared" Version="6.0.1" />
     <PackageReference Include="Volo.Abp.OpenIddict.Domain.Shared" Version="6.0.1" />
-  <ProjectReference Include="..\..\modules\NewModule\src\NewModule.Domain.Shared\NewModule.Domain.Shared.csproj" /></ItemGroup>
+  <ProjectReference Include="..\..\modules\NewModule\src\NewModule.Domain.Shared\NewModule.Domain.Shared.csproj" /><ProjectReference Include="..\..\modules\SecondModule\src\SecondModule.Domain.Shared\SecondModule.Domain.Shared.csproj" /></ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Localization\TestProject\*.json" />

@@ -14,6 +14,7 @@ using Volo.Abp.PermissionManagement.OpenIddict;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
 using NewModule;
+using SecondModule;
 
 namespace TestProject;
 
@@ -31,6 +32,7 @@ namespace TestProject;
     typeof(AbpEmailingModule)
 )]
 [DependsOn(typeof(NewModuleDomainModule))]
+    [DependsOn(typeof(SecondModuleDomainModule))]
     public class TestProjectDomainModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)

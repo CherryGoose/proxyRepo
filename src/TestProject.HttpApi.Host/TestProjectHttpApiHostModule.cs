@@ -29,6 +29,7 @@ using Volo.Abp.Modularity;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.VirtualFileSystem;
 using NewModule;
+using SecondModule;
 
 namespace TestProject;
 
@@ -100,6 +101,12 @@ public class TestProjectHttpApiHostModule : AbpModule
             {
                 opts.RootPath = "new-module";
                 opts.RemoteServiceName = "NewModule";
+
+            });
+            options.ConventionalControllers.Create(typeof(SecondModuleApplicationModule).Assembly, opts =>
+            {
+                opts.RootPath = "second-module";
+                opts.RemoteServiceName = "SecondModule";
 
             });
         });

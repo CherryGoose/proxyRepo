@@ -1,0 +1,71 @@
+{
+  "modules": {
+    "second-module": {
+      "rootPath": "second-module",
+      "remoteServiceName": "SecondModule",
+      "controllers": {
+        "SecondModule.SecondNewModuleAppService": {
+          "controllerName": "SecondNewModule",
+          "controllerGroupName": "SecondNewModule",
+          "isRemoteService": true,
+          "apiVersion": null,
+          "type": "SecondModule.SecondNewModuleAppService",
+          "interfaces": [
+            {
+              "type": "Volo.Abp.Validation.IValidationEnabled"
+            },
+            {
+              "type": "Volo.Abp.Auditing.IAuditingEnabled"
+            },
+            {
+              "type": "Volo.Abp.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+            },
+            {
+              "type": "SecondModule.ISecondNewModuleAppService"
+            }
+          ],
+          "actions": {
+            "SetSecondModAttAsyncByM": {
+              "uniqueName": "SetSecondModAttAsyncByM",
+              "name": "SetSecondModAttAsync",
+              "httpMethod": "POST",
+              "url": "api/second-module/second-new-module/set-second-mod-att",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "m",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "m",
+                  "name": "m",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Boolean",
+                "typeSimple": "boolean"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SecondModule.ISecondNewModuleAppService"
+            }
+          }
+        }
+      }
+    }
+  },
+  "types": {}
+}

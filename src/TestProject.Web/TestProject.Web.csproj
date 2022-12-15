@@ -19,7 +19,7 @@
     <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
     <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
     <PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" Version="6.0.5" />
-  <ProjectReference Include="..\..\modules\NewModule\src\NewModule.Web\NewModule.Web.csproj" /></ItemGroup>
+  <ProjectReference Include="..\..\modules\NewModule\src\NewModule.Web\NewModule.Web.csproj" /><ProjectReference Include="..\..\modules\SecondModule\src\SecondModule.Web\SecondModule.Web.csproj" /></ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite" Version="1.0.0" />

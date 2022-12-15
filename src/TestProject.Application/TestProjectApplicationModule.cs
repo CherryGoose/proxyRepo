@@ -7,6 +7,7 @@ using Volo.Abp.PermissionManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
 using NewModule;
+using SecondModule;
 
 namespace TestProject;
 
@@ -21,6 +22,7 @@ namespace TestProject;
     typeof(AbpSettingManagementApplicationModule)
     )]
 [DependsOn(typeof(NewModuleApplicationModule))]
+    [DependsOn(typeof(SecondModuleApplicationModule))]
     public class TestProjectApplicationModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)

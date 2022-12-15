@@ -8,6 +8,7 @@ using Volo.Abp.TenantManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.VirtualFileSystem;
 using NewModule;
+using SecondModule;
 
 namespace TestProject;
 
@@ -21,6 +22,7 @@ namespace TestProject;
     typeof(AbpSettingManagementHttpApiClientModule)
 )]
 [DependsOn(typeof(NewModuleHttpApiClientModule))]
+    [DependsOn(typeof(SecondModuleHttpApiClientModule))]
     public class TestProjectHttpApiClientModule : AbpModule
 {
     public const string RemoteServiceName = "Default";

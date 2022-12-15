@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TestProject.Application.Contracts\TestProject.Application.Contracts.csproj" />
-  <ProjectReference Include="..\..\modules\NewModule\src\NewModule.HttpApi.Client\NewModule.HttpApi.Client.csproj" /></ItemGroup>
+  <ProjectReference Include="..\..\modules\NewModule\src\NewModule.HttpApi.Client\NewModule.HttpApi.Client.csproj" /><ProjectReference Include="..\..\modules\SecondModule\src\SecondModule.HttpApi.Client\SecondModule.HttpApi.Client.csproj" /></ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Account.HttpApi.Client" Version="6.0.1" />
@@ -23,6 +23,10 @@
   <ItemGroup>
     <EmbeddedResource Include="**\*generate-proxy.json" />
     <Content Remove="**\*generate-proxy.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientProxies\" />
   </ItemGroup>
 
 </Project>

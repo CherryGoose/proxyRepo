@@ -10,7 +10,7 @@
   <ItemGroup>
     <ProjectReference Include="..\TestProject.Domain\TestProject.Domain.csproj" />
     <ProjectReference Include="..\TestProject.Application.Contracts\TestProject.Application.Contracts.csproj" />
-  <ProjectReference Include="..\..\modules\NewModule\src\NewModule.Application\NewModule.Application.csproj" /></ItemGroup>
+  <ProjectReference Include="..\..\modules\NewModule\src\NewModule.Application\NewModule.Application.csproj" /><ProjectReference Include="..\..\modules\SecondModule\src\SecondModule.Application\SecondModule.Application.csproj" /></ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Account.Application" Version="6.0.1" />

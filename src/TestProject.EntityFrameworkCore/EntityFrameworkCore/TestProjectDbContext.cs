@@ -13,6 +13,7 @@ using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 using NewModule.EntityFrameworkCore;
+using SecondModule.EntityFrameworkCore;
 
 namespace TestProject.EntityFrameworkCore;
 
@@ -83,5 +84,6 @@ public class TestProjectDbContext :
         //    //...
         //});
         builder.ConfigureNewModule();
+            builder.ConfigureSecondModule();
         }
 }

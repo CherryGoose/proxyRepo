@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "SecondModule": {
+      "path": "SecondModule.abpmdl.json"
+    }
+  }
+}

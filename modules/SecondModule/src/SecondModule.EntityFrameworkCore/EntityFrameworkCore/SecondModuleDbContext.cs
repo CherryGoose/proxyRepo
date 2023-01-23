@@ -10,7 +10,7 @@ public class SecondModuleDbContext : AbpDbContext<SecondModuleDbContext>, ISecon
     /* Add DbSet for each Aggregate Root here. Example:
      * public DbSet<Question> Questions { get; set; }
      */
-
+    public DbSet<SecondNewModuleEntity> SecondNewModuleEntitys { get; set; }
     public SecondModuleDbContext(DbContextOptions<SecondModuleDbContext> options)
         : base(options)
     {

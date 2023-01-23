@@ -22,10 +22,6 @@ public class IndexModel : TestProjectPageModel
     public async void OnGet()
     {
 
-
-        var module = await _moduleAppService.SetModAttAsync("1");
-        var secondModule = await _secondNewModuleAppService.SetSecondModAttAsync("2");
-        var main = await _mainAppService.SetMainAttAsync("m");
     }
 
     public async Task OnPostLoginAsync()

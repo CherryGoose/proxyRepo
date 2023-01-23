@@ -25,15 +25,109 @@
             }
           ],
           "actions": {
-            "SetSecondModAttAsyncByM": {
-              "uniqueName": "SetSecondModAttAsyncByM",
-              "name": "SetSecondModAttAsync",
+            "CreateAsyncByInput": {
+              "uniqueName": "CreateAsyncByInput",
+              "name": "CreateAsync",
               "httpMethod": "POST",
-              "url": "api/second-module/second-new-module/set-second-mod-att",
+              "url": "api/second-module/second-new-module",
               "supportedVersions": [],
               "parametersOnMethod": [
                 {
-                  "name": "m",
+                  "name": "input",
+                  "typeAsString": "SecondModule.CreateUpdateSecondNewModuleDto, SecondModule.Application.Contracts",
+                  "type": "SecondModule.CreateUpdateSecondNewModuleDto",
+                  "typeSimple": "SecondModule.CreateUpdateSecondNewModuleDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SecondModule.CreateUpdateSecondNewModuleDto",
+                  "typeSimple": "SecondModule.CreateUpdateSecondNewModuleDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SecondModule.SecondNewModuleDto",
+                "typeSimple": "SecondModule.SecondNewModuleDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "Volo.Abp.Application.Services.ICreateAppService<SecondModule.SecondNewModuleDto,SecondModule.CreateUpdateSecondNewModuleDto>"
+            },
+            "UpdateAsyncByIdAndInput": {
+              "uniqueName": "UpdateAsyncByIdAndInput",
+              "name": "UpdateAsync",
+              "httpMethod": "PUT",
+              "url": "api/second-module/second-new-module/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "input",
+                  "typeAsString": "SecondModule.CreateUpdateSecondNewModuleDto, SecondModule.Application.Contracts",
+                  "type": "SecondModule.CreateUpdateSecondNewModuleDto",
+                  "typeSimple": "SecondModule.CreateUpdateSecondNewModuleDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SecondModule.CreateUpdateSecondNewModuleDto",
+                  "typeSimple": "SecondModule.CreateUpdateSecondNewModuleDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SecondModule.SecondNewModuleDto",
+                "typeSimple": "SecondModule.SecondNewModuleDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "Volo.Abp.Application.Services.IUpdateAppService<SecondModule.SecondNewModuleDto,System.String,SecondModule.CreateUpdateSecondNewModuleDto>"
+            },
+            "DeleteAsyncById": {
+              "uniqueName": "DeleteAsyncById",
+              "name": "DeleteAsync",
+              "httpMethod": "DELETE",
+              "url": "api/second-module/second-new-module/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
                   "typeAsString": "System.String, System.Private.CoreLib",
                   "type": "System.String",
                   "typeSimple": "string",
@@ -43,8 +137,106 @@
               ],
               "parameters": [
                 {
-                  "nameOnMethod": "m",
-                  "name": "m",
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "Volo.Abp.Application.Services.IDeleteAppService<System.String>"
+            },
+            "GetAsyncById": {
+              "uniqueName": "GetAsyncById",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/second-module/second-new-module/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SecondModule.SecondNewModuleDto",
+                "typeSimple": "SecondModule.SecondNewModuleDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<SecondModule.SecondNewModuleDto,SecondModule.SecondNewModuleDto,System.String,Volo.Abp.Application.Dtos.PagedAndSortedResultRequestDto>"
+            },
+            "GetListAsyncByInput": {
+              "uniqueName": "GetListAsyncByInput",
+              "name": "GetListAsync",
+              "httpMethod": "GET",
+              "url": "api/second-module/second-new-module",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "Volo.Abp.Application.Dtos.PagedAndSortedResultRequestDto, Volo.Abp.Ddd.Application.Contracts",
+                  "type": "Volo.Abp.Application.Dtos.PagedAndSortedResultRequestDto",
+                  "typeSimple": "Volo.Abp.Application.Dtos.PagedAndSortedResultRequestDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "SkipCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "MaxResultCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Sorting",
                   "jsonName": null,
                   "type": "System.String",
                   "typeSimple": "string",
@@ -52,15 +244,15 @@
                   "defaultValue": null,
                   "constraintTypes": null,
                   "bindingSourceId": "ModelBinding",
-                  "descriptorName": ""
+                  "descriptorName": "input"
                 }
               ],
               "returnValue": {
-                "type": "System.Boolean",
-                "typeSimple": "boolean"
+                "type": "Volo.Abp.Application.Dtos.PagedResultDto<SecondModule.SecondNewModuleDto>",
+                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<SecondModule.SecondNewModuleDto>"
               },
               "allowAnonymous": null,
-              "implementFrom": "SecondModule.ISecondNewModuleAppService"
+              "implementFrom": "Volo.Abp.Application.Services.IReadOnlyAppService<SecondModule.SecondNewModuleDto,SecondModule.SecondNewModuleDto,System.String,Volo.Abp.Application.Dtos.PagedAndSortedResultRequestDto>"
             }
           }
         }

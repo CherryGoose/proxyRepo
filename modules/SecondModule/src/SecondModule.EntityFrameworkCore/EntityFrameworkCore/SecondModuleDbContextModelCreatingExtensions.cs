@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Volo.Abp;
+using Volo.Abp.EntityFrameworkCore.Modeling;
 
 namespace SecondModule.EntityFrameworkCore;
 
@@ -10,6 +12,11 @@ public static class SecondModuleDbContextModelCreatingExtensions
     {
         Check.NotNull(builder, nameof(builder));
 
+        builder.Entity<SecondNewModuleEntity>(b =>
+        {
+            b.ToTable("SecondNewModuleEntitys");
+            b.ConfigureByConvention();
+        });
         /* Configure all entities here. Example:
 
         builder.Entity<Question>(b =>

@@ -3,26 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Volo.Abp.Application.Dtos;
+using Volo.Abp.Application.Services;
+using Volo.Abp.Domain.Repositories;
 
 namespace SecondModule
 {
-    public class SecondNewModuleAppService: SecondModuleAppService, ISecondNewModuleAppService
+    public class SecondNewModuleAppService : CrudAppService<
+      SecondNewModuleEntity,
+       SecondNewModuleDto,
+       string,
+       PagedAndSortedResultRequestDto,
+       CreateUpdateSecondNewModuleDto,
+       CreateUpdateSecondNewModuleDto>,
+        ISecondNewModuleAppService
     {
-        private string modAtt;
-        public SecondNewModuleAppService()
+        public SecondNewModuleAppService(IRepository<SecondNewModuleEntity, string> repository) : base(repository)
         {
 
 
         }
-
-
-        public async Task<bool> SetSecondModAttAsync(string m)
-        {
-            modAtt = m;
-
-            return true;
-        }
-
-
     }
 }
